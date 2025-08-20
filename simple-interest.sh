@@ -1,0 +1,1 @@
+-e "#!/bin/bash\np=1000\nr=10\nt=2\necgo\"scale=2; si=($p*$r*$t)/100; si\"|bc"
