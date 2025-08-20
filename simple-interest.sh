@@ -1,1 +1,10 @@
--e "#!/bin/bash\np=1000\nr=10\nt=2\necgo\"scale=2; si=($p*$r*$t)/100; si\"|bc"
+#!/bin/bash
+if["$#" -ne 3]; then
+echo "Usage : $0 principal rate time"
+exit 1
+fi
+principal=$1
+rate=$2
+time=$3
+interest =$(echo "$principal *$rate*$time/100"|bc-l)
+echo "Simple Interest is:$interest"
